@@ -5,8 +5,9 @@ public class main{
 	public static void main(String[] args) {
 		boolean start=true;
 		while(start==true){
+			System.out.println("Guess a number!")
 			Scanner x = new Scanner(System.in);
-			int count=0;
+			int count=1;
 			int guess = Integer.parseInt(x.nextLine());
 			int answer = genNumber();
 			String response = checkInt(guess,answer);
