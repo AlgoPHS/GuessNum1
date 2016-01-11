@@ -1,3 +1,9 @@
+//Phil Vasseur and Jack Stange
+//1/11/16
+//Guess a number program using git
+//Input: 5, 50, 25, 30
+//Output: t00 low, too high, too low, You got it right!
+
 import java.util.Scanner;
 import java.util.Random;
 
@@ -5,7 +11,7 @@ public class main{
 	public static void main(String[] args) {
 		boolean start=true;
 		while(start==true){
-			System.out.println("Guess a number!")
+			System.out.println("Guess a number!");
 			Scanner x = new Scanner(System.in);
 			int count=1;
 			int guess = Integer.parseInt(x.nextLine());
