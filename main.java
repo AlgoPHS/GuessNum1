@@ -3,8 +3,8 @@ import java.util.Random;
 
 public class main{
 	public static void main(String[] args) {
-		start=true;
-		while(start=true){
+		boolean start=true;
+		while(start==true){
 			Scanner x = new Scanner(System.in);
 			int count=0;
 			int guess = Integer.parseInt(x.nextLine());
@@ -18,20 +18,21 @@ public class main{
 			}
 			System.out.println("You got it right! It only took you "+count+" attempts!");
 			System.out.println("Do you want to continue? (y/n)");
-			if(x.nextLine().equals("n").ignoreCase())
+			if(x.nextLine().toLowerCase().equals("n"))
 				start=false;
 		}
 	}
-	public String checkInt(int guess, int answer){
-	String response1;
-	if(guess==answer)
-		response1 = "winner winner chicken dinner";
-	if(guess>answer)
-		response1 = "too high";
-	if(guess<answer)
-		response1 = "too low";				
+	public  static String checkInt(int guess, int answer){
+		String response1="";
+		if(guess==answer)
+			response1 = "winner winner chicken dinner";
+		if(guess>answer)
+			response1 = "too high";
+		if(guess<answer)
+			response1 = "too low";
+		return response1;				
 	}
-	public int genNumber(){
+	public static int genNumber(){
 		Random gen = new Random();
 		return gen.nextInt(100);
 	}
