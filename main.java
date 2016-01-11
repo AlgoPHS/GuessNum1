@@ -9,8 +9,14 @@ public class main{
 		int answer = genNumber();
 		String response = checkInt(guess,answer);
 	}
-	public String checkInt(int guess){
-
+	public String checkInt(int guess, int answer){
+	String response1;
+	if(guess=answer)
+		response1 = "winner winner chicken dinner";
+	if(guess>answer)
+		response1 = "too high";
+	if(guess<answer)
+		response1 = "too low";				
 	}
 	public int genNumber(){
 		Random
